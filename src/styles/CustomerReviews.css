@@ -1,0 +1,338 @@
+/* ==================================================
+   TRANG ĐÁNH GIÁ VÀ TRẢI NGHIỆM CỦA KHÁCH HÀNG
+   Màu hồng chính: #FE6B6E
+================================================== */
+
+/* ===== 1. TOÀN BỘ TRANG ===== */
+
+.customer-reviews-page {
+  min-height: 100vh;
+  padding: 20px 5%;
+  background: #fff7f7;
+  color: #4b3838;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== 2. TÊN TRANG PHÍA TRÊN ===== */
+
+.customer-reviews-label {
+  margin-bottom: 20px;
+  color: #fe6b6e;
+  font-size: 14px;
+}
+
+/* ===== 3. KHUNG NỘI DUNG CHÍNH ===== */
+
+.customer-reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.customer-reviews-container h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.customer-reviews-container h1 span {
+  color: #fe6b6e;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* ===== 4. KHUNG TỔNG ĐIỂM 4.9 ===== */
+
+.rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  padding: 18px 25px;
+
+  border: 1px solid #f4caca;
+  border-radius: 12px;
+
+  background: #ffe9e9;
+}
+
+/* ===== 5. ĐIỂM TRUNG BÌNH BÊN TRÁI ===== */
+
+.rating-main {
+  min-width: 130px;
+  text-align: center;
+  padding-right: 25px;
+  border-right: 1px solid #efcaca;
+}
+
+.rating-main > strong {
+  display: block;
+  font-size: 38px;
+  color: #4b3838;
+}
+
+.summary-stars {
+  margin: 3px 0;
+  color: #ffb000;
+  font-size: 22px;
+}
+
+.rating-main span {
+  font-size: 13px;
+}
+
+/* ===== 6. ĐIỂM TỪNG TIÊU CHÍ ===== */
+
+.rating-details {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 45px;
+  row-gap: 18px;
+}
+
+.rating-detail {
+  display: grid;
+  grid-template-columns: 115px 1fr 30px;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 13px;
+}
+
+/* ===== 7. THANH ĐIỂM ===== */
+
+.rating-bar {
+  height: 12px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+  background: #b7b7b7;
+}
+
+.rating-bar div {
+  height: 100%;
+
+  border-radius: 10px;
+  background: #fe6b6e;
+}
+
+/* ===== 8. BỘ LỌC VÀ SẮP XẾP ===== */
+
+.review-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 15px 0 12px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Các nút Tất cả, 5 sao, 4 sao... */
+
+.filter-buttons button {
+  padding: 7px 12px;
+
+  border: 1px solid #fe6b6e;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #fe6b6e;
+
+  cursor: pointer;
+}
+
+/* Nút đang được chọn */
+
+.filter-buttons button.active {
+  background: #fe6b6e;
+  color: #ffffff;
+}
+
+/* ===== 9. PHẦN SẮP XẾP ===== */
+
+.review-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #fe6b6e;
+  font-size: 13px;
+}
+
+.review-sort select {
+  padding: 7px 10px;
+
+  border: 1px solid #fe6b6e;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #4b3838;
+
+  outline: none;
+}
+
+/* ===== 10. DANH SÁCH ĐÁNH GIÁ ===== */
+
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* ===== 11. TỪNG THẺ ĐÁNH GIÁ ===== */
+
+.customer-review-card {
+  padding: 15px;
+
+  border: 1px solid #f4caca;
+  border-radius: 8px;
+
+  background: #fffafa;
+}
+
+/* ===== 12. THÔNG TIN KHÁCH HÀNG ===== */
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ffd9da;
+  color: #fe6b6e;
+}
+
+.review-user p {
+  margin: 3px 0 0;
+  font-size: 13px;
+}
+
+/* ===== 13. TRẠNG THÁI ĐÃ LƯU TRÚ ===== */
+
+.review-saved {
+  margin-left: auto;
+
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: #ffd9da;
+  color: #fe6b6e;
+
+  font-size: 12px;
+}
+
+/* ===== 14. SAO CỦA KHÁCH HÀNG ===== */
+
+.customer-stars {
+  margin: 8px 0 5px;
+
+  color: #ffb000;
+  font-size: 16px;
+}
+
+/* ===== 15. TIÊU ĐỀ VÀ NỘI DUNG ĐÁNH GIÁ ===== */
+
+.customer-review-card h3 {
+  margin: 5px 0 7px;
+  font-size: 15px;
+}
+
+.review-text {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ===== 16. PHẦN CUỐI TRANG ===== */
+
+.reviews-bottom {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.reviews-bottom button {
+  min-width: 190px;
+
+  padding: 8px 18px;
+
+  border: 1px solid #fe6b6e;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #fe6b6e;
+
+  cursor: pointer;
+}
+
+.reviews-bottom button:hover {
+  background: #fe6b6e;
+  color: #ffffff;
+}
+
+.reviews-bottom p {
+  margin: 7px 0 0;
+
+  color: #fe6b6e;
+  font-size: 12px;
+}
+
+/* ===== 17. MÀN HÌNH NHỎ ===== */
+
+@media (max-width: 850px) {
+  /* Khung tổng điểm chuyển thành dọc */
+  .rating-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rating-main {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 15px;
+
+    border-right: none;
+    border-bottom: 1px solid #efcaca;
+  }
+
+  /* Các tiêu chí thành 1 cột */
+  .rating-details {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  /* Các bài đánh giá thành 1 cột */
+  .reviews-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Bộ lọc xuống dòng */
+  .review-filter {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,314 @@
+/* ==================================================
+   TRANG VIẾT BÀI TRẢI NGHIỆM
+   Màu hồng chính: #FE6B6E
+================================================== */
+
+/* ===== 1. TOÀN BỘ TRANG ===== */
+
+.experience-page {
+  min-height: 100vh;
+  padding: 20px 5%;
+  background: #fff7f7;
+  color: #4b3838;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== 2. TÊN TRANG PHÍA TRÊN ===== */
+
+.experience-page-label {
+  margin-bottom: 20px;
+  color: #fe6b6e;
+  font-size: 14px;
+}
+
+/* ===== 3. KHUNG NỘI DUNG CHÍNH ===== */
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-container h1 {
+  margin-bottom: 25px;
+  color: #4b3838;
+  font-size: 26px;
+}
+
+/* Chữ (Khách hàng) */
+.experience-container h1 span {
+  color: #fe6b6e;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* ===== 4. CHIA GIAO DIỆN THÀNH 2 CỘT ===== */
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 25px;
+}
+
+/* ===== 5. KHUNG VIẾT BÀI BÊN TRÁI ===== */
+
+.experience-form-card {
+  padding: 22px;
+  border: 1px solid #f4caca;
+  border-radius: 10px;
+  background: #fffafa;
+}
+
+.experience-form-card h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+/* ===== 6. THÔNG BÁO ĐANG CHỈNH SỬA ===== */
+
+.experience-warning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 20px;
+  padding: 12px;
+
+  border-radius: 8px;
+  background: #ffd6d7;
+  color: #fe6b6e;
+  font-size: 13px;
+}
+
+.experience-warning button {
+  padding: 7px 10px;
+  border: 1px solid #fe6b6e;
+  border-radius: 5px;
+  background: transparent;
+  color: #fe6b6e;
+  cursor: pointer;
+}
+
+/* ===== 7. CÁC Ô NHẬP THÔNG TIN ===== */
+
+.experience-form-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+
+.experience-form-card input,
+.experience-form-card select,
+.experience-form-card textarea {
+  width: 100%;
+  padding: 11px 12px;
+
+  border: 1px solid #fe6b6e;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #4b3838;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Khi bấm vào ô nhập */
+.experience-form-card input:focus,
+.experience-form-card select:focus,
+.experience-form-card textarea:focus {
+  box-shadow: 0 0 0 2px #ffe1e2;
+}
+
+/* Ô nhập nội dung */
+.experience-form-card textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* ===== 8. ĐẾM SỐ KÝ TỰ ===== */
+
+.experience-count {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -8px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+/* ===== 9. THÔNG BÁO KIỂM DUYỆT ===== */
+
+.experience-info {
+  margin-bottom: 20px;
+  padding: 12px;
+
+  border: 1px solid #fe6b6e;
+  border-radius: 6px;
+
+  background: #ffe8e8;
+  color: #c85a5d;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ===== 10. NÚT GỬI BÀI VIẾT ===== */
+
+.experience-submit {
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #fe6b6e;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.experience-submit:hover {
+  background: #e95f62;
+}
+
+/* ===== 11. THÔNG BÁO SAU KHI GỬI ===== */
+
+.experience-message {
+  margin-top: 15px;
+  padding: 10px;
+
+  border-radius: 6px;
+  background: #ffe8e8;
+
+  color: #fe6b6e;
+  font-size: 13px;
+}
+
+/* ===== 12. KHUNG BÀI VIẾT CỦA TÔI BÊN PHẢI ===== */
+
+.my-posts-card {
+  padding: 22px;
+  border: 1px solid #f4caca;
+  border-radius: 10px;
+  background: #fffafa;
+}
+
+.my-posts-card h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+/* ===== 13. TỪNG BÀI VIẾT ===== */
+
+.my-post {
+  padding: 15px 5px;
+  border-bottom: 1px solid #f4dada;
+}
+
+.my-post:last-child {
+  border-bottom: none;
+}
+
+.my-post p {
+  margin: 9px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Tiêu đề bài viết và trạng thái */
+.my-post-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.my-post-title strong {
+  font-size: 17px;
+}
+
+/* ===== 14. TRẠNG THÁI CÔNG KHAI ===== */
+
+.post-public {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #d8f3dc;
+  color: #388e3c;
+  font-size: 13px;
+}
+
+/* ===== 15. TRẠNG THÁI BỊ ẨN ===== */
+
+.post-hidden {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #fe6b6e;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+/* ===== 16. LÝ DO BÀI VIẾT BỊ ẨN ===== */
+
+.post-reason {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 12px;
+  padding: 12px;
+
+  border-radius: 7px;
+  background: #ffb8ba;
+  color: #d84f53;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.post-reason strong {
+  flex-shrink: 0;
+}
+
+/* ===== 17. NÚT CHỈNH SỬA VÀ GỬI LẠI ===== */
+
+.post-edit-button {
+  margin-top: 12px;
+  padding: 9px 12px;
+
+  border: 1px solid #fe6b6e;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #fe6b6e;
+
+  cursor: pointer;
+}
+
+.post-edit-button:hover {
+  background: #fe6b6e;
+  color: #ffffff;
+}
+
+/* ===== 18. MÀN HÌNH NHỎ ===== */
+
+@media (max-width: 850px) {
+  /* Từ 2 cột chuyển thành 1 cột */
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-warning {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .post-reason {
+    flex-direction: column;
+  }
+}

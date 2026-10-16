@@ -1,0 +1,354 @@
+/* ==================================================
+   TRANG ĐĂNG NHẬP / ĐĂNG KÝ + KHU VỰC TÀI KHOẢN Ở HEADER
+   Màu hồng chính lấy từ App.css (--pink)
+================================================== */
+
+/* ===== 1. LỚP PHỦ TOÀN MÀN HÌNH ===== */
+
+.nest-auth-page {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  overflow-y: auto;
+
+  background: rgba(36, 36, 36, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+/* ===== 2. KHUNG CHÍNH: ẢNH TRÁI + FORM PHẢI ===== */
+
+.nest-auth-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+  max-width: 920px;
+  margin: auto;
+
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== 3. CỘT ẢNH BÊN TRÁI ===== */
+
+.nest-auth-side {
+  position: relative;
+  min-height: 560px;
+  color: #ffffff;
+}
+
+.nest-auth-side img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nest-auth-side-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(36, 36, 36, 0.15) 0%,
+    rgba(36, 36, 36, 0.75) 100%
+  );
+}
+
+.nest-auth-side-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 32px;
+}
+
+.nest-auth-brand {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--pink-tag, #ffc5c8);
+}
+
+.nest-auth-side-text h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.nest-auth-side-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ===== 4. CỘT FORM BÊN PHẢI ===== */
+
+.nest-auth-main {
+  position: relative;
+  padding: 36px 36px 28px;
+  color: var(--text, #242424);
+}
+
+.nest-auth-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+  background: #f4f4f4;
+  color: #555555;
+  cursor: pointer;
+}
+
+.nest-auth-close:hover {
+  background: var(--pink-light, #f9dddd);
+  color: var(--pink-dark, #ff4f5c);
+}
+
+/* ===== 5. HAI TAB ĐĂNG NHẬP / ĐĂNG KÝ ===== */
+
+.nest-auth-tabs {
+  display: inline-flex;
+  gap: 4px;
+
+  margin-bottom: 22px;
+  padding: 4px;
+
+  border-radius: 999px;
+  background: #f4f4f4;
+}
+
+.nest-auth-tabs button {
+  padding: 8px 20px;
+
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #666666;
+
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nest-auth-tabs button.active {
+  background: var(--pink, #ff646d);
+  color: #ffffff;
+}
+
+/* ===== 6. TIÊU ĐỀ ===== */
+
+.nest-auth-main h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.nest-auth-subtitle {
+  margin: 0 0 16px;
+  color: var(--muted, #666666);
+  font-size: 14px;
+}
+
+/* Thông báo "Vui lòng đăng nhập để đặt phòng" */
+.nest-auth-notice {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+
+  border: 1px solid var(--pink-tag, #ffc5c8);
+  border-radius: 8px;
+  background: var(--pink-light, #f9dddd);
+  color: #c9444c;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===== 7. FORM ===== */
+
+.nest-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.nest-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nest-auth-field > span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444444;
+}
+
+.nest-auth-field input {
+  width: 100%;
+  padding: 11px 12px;
+
+  border: 1px solid #f0c9cc;
+  border-radius: 8px;
+  background: #fffafa;
+  color: var(--text, #242424);
+
+  font-size: 14px;
+  outline: none;
+}
+
+.nest-auth-field input:focus {
+  border-color: var(--pink, #ff646d);
+  box-shadow: 0 0 0 3px rgba(255, 100, 109, 0.15);
+}
+
+/* Ô mật khẩu có nút con mắt */
+.nest-auth-password {
+  position: relative;
+}
+
+.nest-auth-password input {
+  padding-right: 42px;
+}
+
+.nest-auth-password button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  background: transparent;
+  color: #888888;
+  cursor: pointer;
+}
+
+.nest-auth-password button:hover {
+  color: var(--pink-dark, #ff4f5c);
+}
+
+/* ===== 8. THÔNG BÁO LỖI ===== */
+
+.nest-auth-error {
+  margin: 0;
+  padding: 9px 12px;
+
+  border-radius: 8px;
+  background: #fdecec;
+  color: #d33a43;
+
+  font-size: 13px;
+}
+
+/* ===== 9. NÚT GỬI ===== */
+
+.nest-auth-submit {
+  margin-top: 4px;
+  padding: 12px;
+
+  border: none;
+  border-radius: 9px;
+  background: var(--pink, #ff646d);
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nest-auth-submit:hover {
+  background: var(--pink-dark, #ff4f5c);
+}
+
+/* ===== 10. CHUYỂN GIỮA 2 TAB + GHI CHÚ ===== */
+
+.nest-auth-switch {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: #555555;
+}
+
+.nest-auth-switch button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--pink-dark, #ff4f5c);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nest-auth-switch button:hover {
+  text-decoration: underline;
+}
+
+.nest-auth-demo {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  font-size: 11px;
+  color: #999999;
+}
+
+/* ===== 11. KHU VỰC TÀI KHOẢN Ở HEADER (khi đã đăng nhập) ===== */
+
+.header-user {
+  font-size: 13px;
+  color: var(--text, #242424);
+  white-space: nowrap;
+}
+
+.header-user strong {
+  color: var(--pink-dark, #ff4f5c);
+}
+
+/* ===== 12. MÀN HÌNH NHỎ ===== */
+
+@media (max-width: 760px) {
+  /* Ẩn cột ảnh, chỉ còn form */
+  .nest-auth-card {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+
+  .nest-auth-side {
+    display: none;
+  }
+
+  .nest-auth-main {
+    padding: 30px 22px 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-user {
+    display: none;
+  }
+}
